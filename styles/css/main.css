@@ -1,0 +1,121 @@
+/* Variables */
+/* Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Globals */
+body {
+  background: linear-gradient(hsla(224deg, 35%, 11%, 0.93), hsla(224deg, 35%, 11%, 0.93)), url(/assets/mobile/image-host.jpg);
+  background-size: cover;
+  background-position: 50% 0%;
+  color: hsl(225deg, 40%, 83%);
+  font-family: "Chivo", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1 {
+  font-weight: 300;
+  color: hsl(255deg, 100%, 100%);
+}
+
+/* Landing Page */
+.container {
+  --side-padd: 1.5rem;
+  width: min(100%, 69.375rem + var(--side-padd) * 2);
+  margin-inline: auto;
+  padding-inline: var(--side-padd);
+}
+
+.logo {
+  display: block;
+  margin-inline: auto;
+}
+
+.main-container {
+  padding-top: 3.875rem;
+  padding-bottom: 5.625rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.main-content .main-heading {
+  margin-top: 3.562rem;
+  font-size: 1.625rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.main-content .main-heading span {
+  color: hsl(157deg, 74%, 62%);
+}
+.main-content .main-text {
+  margin-top: 1rem;
+}
+.main-content .platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.0625rem;
+}
+.main-content .platforms .spotify {
+  width: 3.5rem;
+  height: 1.0625rem;
+}
+.main-content .platforms .apple-podcast {
+  width: 2.8125rem;
+  height: 1.0625rem;
+}
+.main-content .platforms .google-podcasts {
+  width: 4.5625rem;
+  height: 0.6875rem;
+}
+.main-content .platforms .pocket-casts {
+  width: 4.8125rem;
+  height: 0.9375rem;
+}
+.main-content .registration-form {
+  margin-top: 3rem;
+}
+.main-content .registration-form ::-moz-placeholder {
+  color: hsl(225deg, 40%, 83%);
+  opacity: 1;
+}
+.main-content .registration-form :-ms-input-placeholder {
+  color: hsl(225deg, 40%, 83%);
+  opacity: 1;
+}
+.main-content .registration-form ::placeholder {
+  color: hsl(225deg, 40%, 83%);
+  opacity: 1;
+}
+.main-content .registration-form input {
+  display: block;
+  width: 100%;
+  padding: 0.5625rem 2rem;
+  border: none;
+  border-radius: 3.125rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 2;
+}
+.main-content .registration-form #email-field {
+  background-color: hsl(225deg, 26%, 23%);
+  color: hsl(225deg, 40%, 83%);
+}
+.main-content .registration-form #submit-btn {
+  margin-top: 1rem;
+  background-color: hsl(157deg, 74%, 62%);
+  color: hsl(224deg, 35%, 11%);
+}/*# sourceMappingURL=main.css.map */

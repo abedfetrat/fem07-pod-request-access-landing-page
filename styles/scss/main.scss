@@ -1,0 +1,143 @@
+/* Variables */
+
+$color-dark-blue: hsla(224, 35%, 11%, 1);
+$color-grayish-blue: hsla(225, 26%, 23%, 1);
+$color-grayish-blue-lighter: hsla(225, 21%, 45%, 1);
+$color-primary: hsla(157, 74%, 62%, 1);
+$color-background: $color-dark-blue;
+$color-background-overlay: hsla(224, 35%, 11%, 0.93);
+$color-white: hsla(255, 100%, 100%, 1);
+$color-text: hsla(225, 40%, 83%, 1);
+
+/* Resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Globals */
+
+body {
+  background: linear-gradient(
+      $color-background-overlay,
+      $color-background-overlay
+    ),
+    url(/assets/mobile/image-host.jpg);
+  background-size: cover;
+  background-position: 50% 0%;
+  color: $color-text;
+  font-family: "Chivo", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1 {
+  font-weight: 300;
+  color: $color-white;
+}
+
+/* Landing Page */
+
+.container {
+  --side-padd: 1.5rem;
+  width: min(100%, calc(69.375rem + (var(--side-padd) * 2)));
+  margin-inline: auto;
+  padding-inline: var(--side-padd);
+}
+
+.logo {
+  display: block;
+  margin-inline: auto;
+}
+
+.main-container {
+  padding-top: 3.875rem;
+  padding-bottom: 5.625rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .main-heading {
+    margin-top: 3.562rem;
+    font-size: 1.625rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  .main-text {
+    margin-top: 1rem;
+  }
+
+  .platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.0625rem;
+
+    .spotify {
+      width: 3.5rem;
+      height: 1.0625rem;
+    }
+
+    .apple-podcast {
+      width: 2.8125rem;
+      height: 1.0625rem;
+    }
+
+    .google-podcasts {
+      width: 4.5625rem;
+      height: 0.6875rem;
+    }
+
+    .pocket-casts {
+      width: 4.8125rem;
+      height: 0.9375rem;
+    }
+  }
+
+  .registration-form {
+    margin-top: 3rem;
+
+    ::placeholder {
+        color: $color-text;
+        opacity: 1;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 0.5625rem 2rem;
+      border: none;
+      border-radius: 3.125rem;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 2;
+    }
+
+    #email-field {
+      background-color: $color-grayish-blue;
+      color: $color-text;
+    }
+
+    #submit-btn {
+      margin-top: 1rem;
+      background-color: $color-primary;
+      color: $color-dark-blue;
+    }
+  }
+}
