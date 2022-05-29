@@ -1,0 +1,15 @@
+/* Breakpoint values */
+$breakpoints: (
+  "medium": 48em, // 768px
+  "large": 69.375em // 1110px
+);
+
+/* Colors */
+$color-dark-blue: hsla(224, 35%, 11%, 1);
+$color-grayish-blue: hsla(225, 26%, 23%, 1);
+$color-grayish-blue-lighter: hsla(225, 21%, 45%, 1);
+$color-primary: hsla(157, 74%, 62%, 1);
+$color-background: $color-dark-blue;
+$color-background-overlay: hsla(224, 35%, 11%, 0.93);
+$color-white: hsla(255, 100%, 100%, 1);
+$color-text: hsla(225, 40%, 83%, 1);
