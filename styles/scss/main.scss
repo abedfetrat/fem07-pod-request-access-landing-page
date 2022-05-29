@@ -15,6 +15,7 @@
 /* Globals */
 
 body {
+  overflow-x: hidden;
   background: linear-gradient(
       $color-background-overlay,
       $color-background-overlay
@@ -63,6 +64,9 @@ main {
 }
 
 .main-container {
+  --large-bp-side-space: calc(
+    10.3125rem - var(--side-padd)
+  ); // (1440 - 1110) / 2 = 165 - 39 = 126
   position: relative;
   padding-top: 3.875rem;
   padding-bottom: 5.625rem;
@@ -72,6 +76,11 @@ main {
     --side-padd: 2.4375rem;
     padding-top: 3.125rem;
     padding-bottom: 16.0625rem;
+  }
+
+  @include bp-up("large") {
+    padding-top: 6.375rem;
+    padding-bottom: 8.125rem;
   }
 }
 
@@ -90,6 +99,13 @@ main {
     text-align: start;
   }
 
+  @include bp-up("large") {
+    width: max-content;
+    margin-top: 6.4375rem;
+    padding-top: 5.5rem;
+    padding-right: 3.625rem;
+  }
+
   .main-heading {
     font-size: 1.625rem;
     line-height: 1.5;
@@ -104,6 +120,11 @@ main {
       font-size: 3rem;
       line-height: 1.17;
     }
+
+    @include bp-up("large") {
+      font-size: 3.25rem;
+      line-height: 1.2;
+    }
   }
 
   .main-text {
@@ -112,6 +133,10 @@ main {
     @include bp-up("medium") {
       max-width: 40ch;
       margin-top: 2rem;
+    }
+
+    @include bp-up("large") {
+      margin-top: 1.5rem;
     }
   }
 
@@ -211,6 +236,11 @@ main {
   @include bp-up("medium") {
     display: block;
   }
+
+  @include bp-up("large") {
+    top: 8.125rem;
+    right: calc(var(--large-bp-side-space) * -1);
+  }
 }
 
 .bg-pattern {
@@ -222,5 +252,11 @@ main {
 
   @include bp-up("medium") {
     display: block;
+  }
+
+  @include bp-up("large") {
+    left: initial;
+    right: calc(var(--large-bp-side-space) * -1);
+    bottom: 4.875rem;
   }
 }
