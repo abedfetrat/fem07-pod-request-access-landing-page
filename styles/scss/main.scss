@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./functions" as *;
 
 /* Resets */
 
@@ -25,14 +26,14 @@ body {
   background-position: 50% 0%;
   color: $color-text;
   font-family: "Chivo", sans-serif;
-  font-size: 1rem;
+  font-size: rem(16px);
   font-weight: 300;
   line-height: 1.6;
 
   @include bp-up("medium") {
     background: none;
     background-color: $color-background;
-    font-size: 1.125rem;
+    font-size: rem(18px);
   }
 }
 
@@ -48,8 +49,8 @@ main {
 /* Landing Page */
 
 .container {
-  --side-padd: 1.5rem;
-  width: min(100%, calc(69.375rem + (var(--side-padd) * 2)));
+  --side-padd: #{rem(24px)};
+  width: min(100%, calc(rem(1110px) + (var(--side-padd) * 2)));
   margin-inline: auto;
   padding-inline: var(--side-padd);
 }
@@ -65,49 +66,49 @@ main {
 
 .main-container {
   --large-bp-side-space: calc(
-    10.3125rem - var(--side-padd)
+    #{rem(165px)} - var(--side-padd)
   ); // (1440 - 1110) / 2 = 165 - 39 = 126
   position: relative;
-  padding-top: 3.875rem;
-  padding-bottom: 5.625rem;
+  padding-top: rem(62px);
+  padding-bottom: rem(90px);
   z-index: 1;
 
   @include bp-up("medium") {
-    --side-padd: 2.4375rem;
-    padding-top: 3.125rem;
-    padding-bottom: 16.0625rem;
+    --side-padd: #{rem(39px)};
+    padding-top: rem(50px);
+    padding-bottom: rem(257px);
   }
 
   @include bp-up("large") {
-    padding-top: 6.375rem;
-    padding-bottom: 8.125rem;
+    padding-top: rem(102px);
+    padding-bottom: rem(130px);
   }
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
-  padding-top: 3.562rem;
+  padding-top: rem(57px);
   text-align: center;
 
   @include bp-up("medium") {
-    max-width: 50rem;
-    margin-top: 9.5rem;
-    margin-right: calc(5.875rem - var(--side-padd)); // 94px - 39px side padding
-    padding-top: 5.8125rem;
+    max-width: rem(800px);
+    margin-top: rem(152px);
+    margin-right: calc(rem(94px) - var(--side-padd)); // 94px - 39px side padding
+    padding-top: rem(93px);
     background-color: $color-background;
     text-align: start;
   }
 
   @include bp-up("large") {
     width: max-content;
-    margin-top: 6.4375rem;
-    padding-top: 5.5rem;
-    padding-right: 3.625rem;
+    margin-top: rem(103px);
+    padding-top: rem(88px);
+    padding-right: rem(58px);
   }
 
   .main-heading {
-    font-size: 1.625rem;
+    font-size: rem(26px);
     line-height: 1.5;
     text-transform: uppercase;
 
@@ -117,77 +118,77 @@ main {
 
     @include bp-up("medium") {
       max-width: 21ch;
-      font-size: 3rem;
+      font-size: rem(48px);
       line-height: 1.17;
     }
 
     @include bp-up("large") {
-      font-size: 3.25rem;
+      font-size: rem(52px);
       line-height: 1.2;
     }
   }
 
   .main-text {
-    margin-top: 1rem;
+    margin-top: rem(16px);
 
     @include bp-up("medium") {
       max-width: 40ch;
-      margin-top: 2rem;
+      margin-top: rem(32px);
     }
 
     @include bp-up("large") {
-      margin-top: 1.5rem;
+      margin-top: rem(24px);
     }
   }
 
   .platforms {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: rem(24px);
     justify-content: center;
     align-items: center;
-    margin-top: 2.0625rem;
+    margin-top: rem(33px);
 
     @include bp-up("medium") {
       order: 4;
-      gap: 2.5rem;
+      gap: rem(40px);
       justify-content: start;
-      margin-top: 4rem;
+      margin-top: rem(64px);
     }
 
-    @include bp-down(calc(map.get($breakpoints, "medium") - 0.0625rem)) {
+    @include bp-down(calc(map.get($breakpoints, "medium") - rem(1px))) {
       .spotify {
-        width: 3.5rem;
-        height: 1.0625rem;
+        width: rem(56px);
+        height: rem(17px);
       }
 
       .apple-podcast {
-        width: 2.8125rem;
-        height: 1.0625rem;
+        width: rem(45px);
+        height: rem(17px);
       }
 
       .google-podcasts {
-        width: 4.5625rem;
-        height: 0.6875rem;
+        width: rem(73px);
+        height: rem(11px);
       }
 
       .pocket-casts {
-        width: 4.8125rem;
-        height: 0.9375rem;
+        width: rem(77px);
+        height: rem(15px);
       }
     }
   }
 
   .registration-form {
-    margin-top: 3rem;
+    margin-top: rem(48px);
 
     @include bp-up("medium") {
       display: flex;
       align-items: center;
-      max-width: 26.6875rem;
-      margin-top: 2.5rem;
-      padding: 0.3125rem;
-      border-radius: 3.125rem;
+      max-width: rem(427px);
+      margin-top: rem(40px);
+      padding: rem(5px);
+      border-radius: rem(50px);
       background-color: $color-grayish-blue;
     }
 
@@ -199,11 +200,11 @@ main {
     input {
       display: block;
       width: 100%;
-      padding: 0.5625rem 2rem;
+      padding: rem(9px) rem(32px);
       border: none;
-      border-radius: 3.125rem;
+      border-radius: rem(50px);
       font-family: inherit;
-      font-size: 0.875rem;
+      font-size: rem(14px);
       font-weight: 700;
       line-height: 2;
     }
@@ -214,7 +215,7 @@ main {
     }
 
     #submit-btn {
-      margin-top: 1rem;
+      margin-top: rem(16px);
       background-color: $color-primary;
       color: $color-dark-blue;
 
@@ -238,7 +239,7 @@ main {
   }
 
   @include bp-up("large") {
-    top: 8.125rem;
+    top: rem(130px);
     right: calc(var(--large-bp-side-space) * -1);
   }
 }
@@ -247,7 +248,7 @@ main {
   display: none;
   position: absolute;
   bottom: 0;
-  left: 1.875rem;
+  left: rem(30px);
   z-index: 0;
 
   @include bp-up("medium") {
@@ -257,6 +258,6 @@ main {
   @include bp-up("large") {
     left: initial;
     right: calc(var(--large-bp-side-space) * -1);
-    bottom: 4.875rem;
+    bottom: rem(78px);
   }
 }

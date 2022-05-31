@@ -1,5 +1,6 @@
 /* Breakpoint values */
 /* Colors */
+/* Converts pixel value with or without unit to rem */
 /* Resets */
 *,
 *::before,
@@ -82,7 +83,7 @@ main {
 .main-content {
   display: flex;
   flex-direction: column;
-  padding-top: 3.562rem;
+  padding-top: 3.5625rem;
   text-align: center;
 }
 @media screen and (min-width: 48em) {

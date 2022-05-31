@@ -1,5 +1,5 @@
-@use 'sass:map';
-@use './variables' as *;
+@use "sass:map";
+@use "./variables" as *;
 
 @mixin bp-up($bp) {
   @if map.has-key($breakpoints, $bp) {
