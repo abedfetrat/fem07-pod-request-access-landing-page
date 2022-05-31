@@ -57,6 +57,8 @@ main {
 
 .logo {
   display: block;
+  width: rem(135px);
+  height: rem(56px);
   margin-inline: auto;
 
   @include bp-up("medium") {
@@ -156,26 +158,26 @@ main {
       margin-top: rem(64px);
     }
 
-    @include bp-down(calc(map.get($breakpoints, "medium") - rem(1px))) {
-      .spotify {
-        width: rem(56px);
-        height: rem(17px);
-      }
+    $growth-rate: 13vw;
 
-      .apple-podcast {
-        width: rem(45px);
-        height: rem(17px);
-      }
+    .spotify {
+      width: clamp(rem(56px), $growth-rate, rem(96px));
+      height: auto;
+    }
 
-      .google-podcasts {
-        width: rem(73px);
-        height: rem(11px);
-      }
+    .apple-podcast {
+      width: clamp(rem(45px), $growth-rate, rem(78px));
+      height: auto;
+    }
 
-      .pocket-casts {
-        width: rem(77px);
-        height: rem(15px);
-      }
+    .google-podcasts {
+      width: clamp(rem(73px), $growth-rate, rem(125px));
+      height: auto;
+    }
+
+    .pocket-casts {
+      width: clamp(rem(77px), $growth-rate, rem(129px));
+      height: auto;
     }
   }
 

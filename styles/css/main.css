@@ -49,6 +49,8 @@ main {
 
 .logo {
   display: block;
+  width: 8.4375rem;
+  height: 3.5rem;
   margin-inline: auto;
 }
 @media screen and (min-width: 48em) {
@@ -157,23 +159,21 @@ main {
     margin-top: 4rem;
   }
 }
-@media screen and (max-width: calc(48em - 0.0625rem)) {
-  .main-content .platforms .spotify {
-    width: 3.5rem;
-    height: 1.0625rem;
-  }
-  .main-content .platforms .apple-podcast {
-    width: 2.8125rem;
-    height: 1.0625rem;
-  }
-  .main-content .platforms .google-podcasts {
-    width: 4.5625rem;
-    height: 0.6875rem;
-  }
-  .main-content .platforms .pocket-casts {
-    width: 4.8125rem;
-    height: 0.9375rem;
-  }
+.main-content .platforms .spotify {
+  width: clamp(3.5rem, 13vw, 6rem);
+  height: auto;
+}
+.main-content .platforms .apple-podcast {
+  width: clamp(2.8125rem, 13vw, 4.875rem);
+  height: auto;
+}
+.main-content .platforms .google-podcasts {
+  width: clamp(4.5625rem, 13vw, 7.8125rem);
+  height: auto;
+}
+.main-content .platforms .pocket-casts {
+  width: clamp(4.8125rem, 13vw, 8.0625rem);
+  height: auto;
 }
 .main-content .registration-form {
   margin-top: 3rem;
