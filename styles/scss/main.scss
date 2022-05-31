@@ -202,7 +202,7 @@ main {
     input {
       display: block;
       width: 100%;
-      padding: rem(9px) rem(32px);
+      padding: em(9px, 14px) em(32px, 14px);
       border: none;
       border-radius: rem(50px);
       font-family: inherit;

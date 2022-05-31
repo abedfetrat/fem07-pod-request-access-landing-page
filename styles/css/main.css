@@ -1,6 +1,7 @@
 /* Breakpoint values */
 /* Colors */
 /* Converts pixel value with or without unit to rem */
+/* Calculates pixel value to em based on provided font size */
 /* Resets */
 *,
 *::before,
@@ -204,7 +205,7 @@ main {
 .main-content .registration-form input {
   display: block;
   width: 100%;
-  padding: 0.5625rem 2rem;
+  padding: 0.6428571429em 2.2857142857em;
   border: none;
   border-radius: 3.125rem;
   font-family: inherit;
