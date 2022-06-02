@@ -42,6 +42,10 @@ h1 {
   color: $color-white;
 }
 
+input[type="submit"] {
+  cursor: pointer;
+}
+
 main {
   position: relative;
 }
@@ -184,18 +188,8 @@ main {
   .registration-form {
     margin-top: rem(48px);
 
-    @include bp-up("medium") {
-      display: flex;
-      align-items: center;
-      max-width: rem(427px);
-      margin-top: rem(40px);
-      padding: rem(5px);
-      border-radius: rem(50px);
-      background-color: $color-grayish-blue;
-    }
-
     ::placeholder {
-      color: $color-text;
+      color: scale-color($color-white, $alpha: -50%);
       opacity: 1;
     }
 
@@ -209,21 +203,46 @@ main {
       font-size: rem(14px);
       font-weight: 700;
       line-height: 2;
+
+      &:focus-visible {
+        outline: rem(2px) dashed $color-primary;
+      }
+    }
+
+    .input-container {
+      @include bp-up("medium") {
+        position: relative;
+        max-width: rem(427px);
+        margin-top: rem(40px);
+      }
     }
 
     #email-field {
       background-color: $color-grayish-blue;
-      color: $color-text;
+      color: $color-white;
+
+      @include bp-up("medium") {
+        padding: em(14px, 14px) em(37px, 14px);
+        padding-right: em(207px, 14px); // 170px submit btn width + 37px extra
+      }
     }
 
     #submit-btn {
       margin-top: rem(16px);
       background-color: $color-primary;
       color: $color-dark-blue;
+      transition: background-color 200ms ease-in-out;
 
       @include bp-up("medium") {
+        position: absolute;
+        top: rem(5px);
+        right: rem(5px);
         width: min-content;
         margin-top: 0;
+      }
+
+      @include on-event() {
+       background-color: scale-color($color-primary, $lightness: 50%);
       }
     }
   }

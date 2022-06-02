@@ -36,6 +36,10 @@ h1 {
   color: hsl(255deg, 100%, 100%);
 }
 
+input[type=submit] {
+  cursor: pointer;
+}
+
 main {
   position: relative;
 }
@@ -179,27 +183,16 @@ main {
 .main-content .registration-form {
   margin-top: 3rem;
 }
-@media screen and (min-width: 48em) {
-  .main-content .registration-form {
-    display: flex;
-    align-items: center;
-    max-width: 26.6875rem;
-    margin-top: 2.5rem;
-    padding: 0.3125rem;
-    border-radius: 3.125rem;
-    background-color: hsl(225deg, 26%, 23%);
-  }
-}
 .main-content .registration-form ::-moz-placeholder {
-  color: hsl(225deg, 40%, 83%);
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 .main-content .registration-form :-ms-input-placeholder {
-  color: hsl(225deg, 40%, 83%);
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 .main-content .registration-form ::placeholder {
-  color: hsl(225deg, 40%, 83%);
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 .main-content .registration-form input {
@@ -213,22 +206,45 @@ main {
   font-weight: 700;
   line-height: 2;
 }
+.main-content .registration-form input:focus-visible {
+  outline: 0.125rem dashed hsl(157deg, 74%, 62%);
+}
+@media screen and (min-width: 48em) {
+  .main-content .registration-form .input-container {
+    position: relative;
+    max-width: 26.6875rem;
+    margin-top: 2.5rem;
+  }
+}
 .main-content .registration-form #email-field {
   background-color: hsl(225deg, 26%, 23%);
-  color: hsl(225deg, 40%, 83%);
+  color: hsl(255deg, 100%, 100%);
+}
+@media screen and (min-width: 48em) {
+  .main-content .registration-form #email-field {
+    padding: 1em 2.6428571429em;
+    padding-right: 14.7857142857em;
+  }
 }
 .main-content .registration-form #submit-btn {
   margin-top: 1rem;
   background-color: hsl(157deg, 74%, 62%);
   color: hsl(224deg, 35%, 11%);
+  transition: background-color 200ms ease-in-out;
 }
 @media screen and (min-width: 48em) {
   .main-content .registration-form #submit-btn {
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.3125rem;
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
     margin-top: 0;
   }
+}
+.main-content .registration-form #submit-btn:hover, .main-content .registration-form #submit-btn:focus, .main-content .registration-form #submit-btn:active {
+  background-color: #abf2d7;
 }
 
 .bg-img {
