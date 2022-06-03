@@ -209,22 +209,47 @@ main {
 .main-content .registration-form input:focus-visible {
   outline: 0.125rem dashed hsl(157deg, 74%, 62%);
 }
+.main-content .registration-form .input-container {
+  position: relative;
+}
 @media screen and (min-width: 48em) {
   .main-content .registration-form .input-container {
-    position: relative;
     max-width: 26.6875rem;
-    margin-top: 2.5rem;
   }
 }
 .main-content .registration-form #email-field {
   background-color: hsl(225deg, 26%, 23%);
   color: hsl(255deg, 100%, 100%);
 }
+.main-content .registration-form #email-field[data-invalid] {
+  outline: 0.125rem dashed #FB3E3E;
+}
 @media screen and (min-width: 48em) {
   .main-content .registration-form #email-field {
     padding: 1em 2.6428571429em;
     padding-right: 14.7857142857em;
   }
+}
+.main-content .registration-form .email-error-text {
+  display: none;
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FB3E3E;
+}
+@media screen and (min-width: 48em) {
+  .main-content .registration-form .email-error-text {
+    top: unset;
+    left: 2.3125rem;
+    bottom: -0.5rem;
+    transform: translate(0%, 100%);
+  }
+}
+.main-content .registration-form #email-field[data-invalid] ~ .email-error-text {
+  display: block;
 }
 .main-content .registration-form #submit-btn {
   margin-top: 1rem;

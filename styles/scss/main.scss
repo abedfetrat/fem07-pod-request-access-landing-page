@@ -210,10 +210,10 @@ main {
     }
 
     .input-container {
+      position: relative;
+
       @include bp-up("medium") {
-        position: relative;
         max-width: rem(427px);
-        margin-top: rem(40px);
       }
     }
 
@@ -221,10 +221,36 @@ main {
       background-color: $color-grayish-blue;
       color: $color-white;
 
+      &[data-invalid] {
+        outline: rem(2px) dashed $color-error;
+      }
+
       @include bp-up("medium") {
         padding: em(14px, 14px) em(37px, 14px);
         padding-right: em(207px, 14px); // 170px submit btn width + 37px extra
       }
+    }
+
+    .email-error-text {
+      display: none;
+      position: absolute;
+      top: rem(-8px);
+      left: 50%;
+      transform: translate(-50%, -100%);
+      font-size: rem(12px);
+      font-weight: 700;
+      color: $color-error;
+
+      @include bp-up("medium") {
+        top: unset;
+        left: rem(37px);
+        bottom: rem(-8px);
+        transform: translate(0%, 100%);
+      }
+    }
+
+    #email-field[data-invalid] ~ .email-error-text {
+      display: block;
     }
 
     #submit-btn {
