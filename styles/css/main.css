@@ -14,10 +14,10 @@
 /* Globals */
 body {
   overflow-x: hidden;
-  background: linear-gradient(hsla(224deg, 35%, 11%, 0.93), hsla(224deg, 35%, 11%, 0.93)), url(../../assets/mobile/image-host.jpg);
+  background: linear-gradient(#121726, #121726), url(../../assets/mobile/image-host.jpg);
   background-size: cover;
   background-position: 50% 0%;
-  color: hsl(225deg, 40%, 83%);
+  color: #c2cbe5;
   font-family: "Chivo", sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -26,14 +26,14 @@ body {
 @media screen and (min-width: 48em) {
   body {
     background: none;
-    background-color: hsl(224deg, 35%, 11%);
+    background-color: #121726;
     font-size: 1.125rem;
   }
 }
 
 h1 {
   font-weight: 300;
-  color: hsl(255deg, 100%, 100%);
+  color: #ffffff;
 }
 
 input[type=submit] {
@@ -96,7 +96,7 @@ main {
     margin-top: 9.5rem;
     margin-right: calc(5.875rem - var(--side-padd));
     padding-top: 5.8125rem;
-    background-color: hsl(224deg, 35%, 11%);
+    background-color: #121726;
     text-align: start;
   }
 }
@@ -116,7 +116,7 @@ main {
   text-transform: uppercase;
 }
 .main-content .main-heading span {
-  color: hsl(157deg, 74%, 62%);
+  color: #56e6af;
 }
 @media screen and (min-width: 48em) {
   .main-content .main-heading {
@@ -204,7 +204,7 @@ main {
   line-height: 2;
 }
 .main-content .registration-form input:focus-visible {
-  outline: 0.125rem dashed hsl(157deg, 74%, 62%);
+  outline: 0.125rem dashed #56e6af;
 }
 .main-content .registration-form .input-container {
   position: relative;
@@ -215,11 +215,11 @@ main {
   }
 }
 .main-content .registration-form #email-field {
-  background-color: hsl(225deg, 26%, 23%);
-  color: hsl(255deg, 100%, 100%);
+  background-color: #2b334a;
+  color: #ffffff;
 }
 .main-content .registration-form #email-field[data-invalid] {
-  outline: 0.125rem dashed #FB3E3E;
+  outline: 0.125rem dashed #fb3e3e;
 }
 @media screen and (min-width: 48em) {
   .main-content .registration-form #email-field {
@@ -235,7 +235,7 @@ main {
   transform: translate(-50%, -100%);
   font-size: 0.75rem;
   font-weight: 700;
-  color: #FB3E3E;
+  color: #fb3e3e;
 }
 @media screen and (min-width: 48em) {
   .main-content .registration-form .email-error-text {
@@ -250,8 +250,8 @@ main {
 }
 .main-content .registration-form #submit-btn {
   margin-top: 1rem;
-  background-color: hsl(157deg, 74%, 62%);
-  color: hsl(224deg, 35%, 11%);
+  background-color: #56e6af;
+  color: #121726;
   transition: background-color 200ms ease-in-out;
 }
 @media screen and (min-width: 48em) {
@@ -266,7 +266,7 @@ main {
   }
 }
 .main-content .registration-form #submit-btn:hover, .main-content .registration-form #submit-btn:focus, .main-content .registration-form #submit-btn:active {
-  background-color: #abf2d7;
+  background-color: #abf3d7;
 }
 
 .bg-img {
