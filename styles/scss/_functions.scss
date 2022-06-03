@@ -4,14 +4,14 @@ $htmlFontSize: 16px;
 
 /* Converts pixel value with or without unit to rem */
 @function rem($pxValue) {
-    @return math.div(stripUnit($pxValue), stripUnit($htmlFontSize)) * 1rem;
+  @return math.div(stripUnit($pxValue), stripUnit($htmlFontSize)) * 1rem;
 }
 
-/* Calculates pixel value to em based on provided font size */
+/* Calculates em value from pixel value based on the provided font size */
 @function em($pxValue, $fontSize) {
-    @return math.div(stripUnit($pxValue), stripUnit($fontSize)) * 1em;
+  @return math.div(stripUnit($pxValue), stripUnit($fontSize)) * 1em;
 }
 
 @function stripUnit($value) {
-    @return math.div($value, $value * 0 + 1);
+  @return math.div($value, $value * 0 + 1);
 }

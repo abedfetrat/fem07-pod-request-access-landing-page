@@ -1,7 +1,7 @@
 /* Breakpoint values */
 /* Colors */
 /* Converts pixel value with or without unit to rem */
-/* Calculates pixel value to em based on provided font size */
+/* Calculates em value from pixel value based on the provided font size */
 /* Resets */
 *,
 *::before,
@@ -45,13 +45,6 @@ main {
 }
 
 /* Landing Page */
-.container {
-  --side-padd: 1.5rem;
-  width: min(100%, 69.375rem + var(--side-padd) * 2);
-  margin-inline: auto;
-  padding-inline: var(--side-padd);
-}
-
 .logo {
   display: block;
   width: 8.4375rem;
@@ -65,12 +58,16 @@ main {
 }
 
 .main-container {
+  --side-padd: 1.5rem;
   --large-bp-side-space: calc(
     10.3125rem - var(--side-padd)
   );
   position: relative;
+  width: min(100%, 69.375rem + var(--side-padd) * 2);
+  margin-inline: auto;
   padding-top: 3.875rem;
   padding-bottom: 5.625rem;
+  padding-inline: var(--side-padd);
   z-index: 1;
 }
 @media screen and (min-width: 48em) {
