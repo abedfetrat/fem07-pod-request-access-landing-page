@@ -1,4 +1,5 @@
 const registrationForm = document.querySelector('.registration-form');
+const inputContainer = document.querySelector('.input-container');
 const emailField = document.getElementById('email-field');
 const submitBtn = document.getElementById('submit-btn');
 
@@ -11,10 +12,9 @@ emailField.addEventListener('input', (e) => {
     }
 
     if (emailField.validity.valid) {
-        emailField.removeAttribute('data-invalid');
-
+        inputContainer.removeAttribute('data-error');
     } else {
-        emailField.setAttribute('data-invalid', 'true');
+        setError();
     }
 });
 
@@ -22,7 +22,16 @@ registrationForm.addEventListener('submit', (e) => {
     hasSubmitted = true;
 
     if (!emailField.validity.valid) {
-        emailField.setAttribute('data-invalid', 'true');
+        setError();
         e.preventDefault();
     }
 });
+
+function setError() {
+    if (emailField.validity.valueMissing) {
+        inputContainer.setAttribute('data-error', 'Oops! Please add your email');
+
+    } else {
+        inputContainer.setAttribute('data-error', 'Oops! Please check your email');
+    }
+}

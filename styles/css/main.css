@@ -218,35 +218,39 @@ main {
   background-color: #2b334a;
   color: #ffffff;
 }
-.main-content .registration-form #email-field[data-invalid] {
-  outline: 0.125rem dashed #fb3e3e;
-}
 @media screen and (min-width: 48em) {
   .main-content .registration-form #email-field {
     padding: 1em 2.6428571429em;
     padding-right: 14.7857142857em;
   }
 }
-.main-content .registration-form .email-error-text {
-  display: none;
+.main-content .registration-form .input-container[data-error] #email-field {
+  outline: 0.125rem dashed #fb3e3e;
+}
+.main-content .registration-form .input-container[data-error]::after {
+  content: attr(data-error);
+  display: block;
   position: absolute;
   top: -0.5rem;
-  left: 50%;
-  transform: translate(-50%, -100%);
+  left: 1.5rem;
+  margin-right: 1.5rem;
+  transform: translateY(-100%);
+  padding: 0.5rem;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #fb3e3e;
+  background-color: #fb3e3e;
+  color: #ffffff;
 }
 @media screen and (min-width: 48em) {
-  .main-content .registration-form .email-error-text {
+  .main-content .registration-form .input-container[data-error]::after {
     top: unset;
     left: 2.3125rem;
     bottom: -0.5rem;
     transform: translate(0%, 100%);
+    padding: 0;
+    background: none;
+    color: #fb3e3e;
   }
-}
-.main-content .registration-form #email-field[data-invalid] ~ .email-error-text {
-  display: block;
 }
 .main-content .registration-form #submit-btn {
   margin-top: 1rem;

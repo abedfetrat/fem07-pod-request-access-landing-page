@@ -96,7 +96,9 @@ main {
   @include bp-up("medium") {
     max-width: rem(800px);
     margin-top: rem(152px);
-    margin-right: calc(rem(94px) - var(--side-padd)); // 94px - 39px side padding
+    margin-right: calc(
+      rem(94px) - var(--side-padd)
+    ); // 94px - 39px side padding
     padding-top: rem(93px);
     background-color: $color-background;
     text-align: start;
@@ -217,36 +219,39 @@ main {
       background-color: $color-grayish-blue;
       color: $color-white;
 
-      &[data-invalid] {
-        outline: rem(2px) dashed $color-error;
-      }
-
       @include bp-up("medium") {
         padding: em(14px, 14px) em(37px, 14px);
         padding-right: em(207px, 14px); // 170px submit btn width + 37px extra
       }
     }
 
-    .email-error-text {
-      display: none;
+    .input-container[data-error] #email-field {
+      outline: rem(2px) dashed $color-error;
+    }
+
+    .input-container[data-error]::after {
+      content: attr(data-error);
+      display: block;
       position: absolute;
       top: rem(-8px);
-      left: 50%;
-      transform: translate(-50%, -100%);
+      left: rem(24px);
+      margin-right: rem(24px);
+      transform: translateY(-100%);
+      padding: rem(8px);
       font-size: rem(12px);
       font-weight: 700;
-      color: $color-error;
+      background-color: $color-error;
+      color: $color-white;
 
       @include bp-up("medium") {
         top: unset;
         left: rem(37px);
         bottom: rem(-8px);
         transform: translate(0%, 100%);
+        padding: 0;
+        background: none;
+        color: $color-error;
       }
-    }
-
-    #email-field[data-invalid] ~ .email-error-text {
-      display: block;
     }
 
     #submit-btn {
@@ -264,7 +269,7 @@ main {
       }
 
       @include on-event() {
-       background-color: scale-color($color-primary, $lightness: 50%);
+        background-color: scale-color($color-primary, $lightness: 50%);
       }
     }
   }
