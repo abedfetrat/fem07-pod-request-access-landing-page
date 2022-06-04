@@ -10,7 +10,7 @@ $color-grayish-blue: #2b334a;
 $color-grayish-blue-lighter: #5b678b;
 $color-primary: #56e6af;
 $color-background: $color-dark-blue;
-$color-background-overlay: #121726;
+$color-background-overlay: scale-color($color-dark-blue, $alpha: -12%);
 $color-error: #fb3e3e;
 $color-white: #ffffff;
 $color-text: #c2cbe5;
