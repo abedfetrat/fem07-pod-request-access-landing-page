@@ -11,6 +11,7 @@ This is a solution to the [Pod request access landing page challenge on Frontend
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -47,6 +48,10 @@ Users should be able to:
 ### What I learned
 
 I learned to setup a simple HTML Form with custom validation message and style.
+
+### Continued development
+
+Because the background image and the pattern graphic is decorative elements and don't provide to the content of the page, I should move them from the HTML file to the CSS inorder to have a more cleaner markup. 
 
 ## Author
 
