@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-landing-page-using-scss-ESrO-dFF-O)
 - Live Site URL: [Live Demo](https://abedfetrat.github.io/fem07-pod-request-access-landing-page)
 
 ### Screenshot
